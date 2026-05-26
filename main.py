@@ -7,33 +7,48 @@ from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
 from tavily import TavilyClient
 
-# can also do from langchain_tavily import TavilySearch
-# tools = [TavilySearch]
+from typing import List
+from pydantic import BaseModel, Field
+
+from langchain_tavily import TavilySearch
 
 load_dotenv()
 
 
-tavily = TavilyClient()
+#tavily = TavilyClient()
 
-@tool
-def search_query(query: str) -> str:
-    """
-    Tool that searches over internet
-    Args:
-        query: The query to search for
-    Returns:
-        The search result
-    """
-    print(f"Searching for: {query}")
-    return tavily.search(query=query)
+#@tool
+#def search_query(query: str) -> str:
+#    """
+#    Tool that searches over internet
+#    Args:
+#        query: The query to search for
+#    Returns:
+#        The search result
+#    """
+#    print(f"Searching for: {query}")
+#    return tavily.search(query=query)
+
+
+class Source(BaseModel):
+    """Schema for a source used by the agent"""
+
+    url:str = Field(description="The URL of the source")
+
+
+class AgentResponse(BaseModel):
+    """Schema for agent response with answer and sources"""
+
+    answer:str = Field(description="The agent's answer to the query")
+    sources: List[Source] = Field(default_factory=list, description="List of sources used to generate the answer") 
 
 
 llm = ChatOllama(temperature = 0, model = "llama3.2:3b")
 
-tools = [search_query]
+tools = [TavilySearch()]
 
 
-agent = create_agent(llm, tools = tools)
+agent = create_agent(llm, tools = tools, response_format=AgentResponse)
 
 
 def main():
