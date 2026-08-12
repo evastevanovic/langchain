@@ -32,11 +32,9 @@ This repository takes you through 5 real-world AI agent projects, from simple he
 ## ▶️ Getting Started 
 
 ### 🛠️ Prerequisites 
-- **Basic software engineering concepts needed** - Familiarity with git, Python, environment variables, classes, testing, and debugging.
 - Python 3.10+
 - Any Python package manager (uv, poetry, pipenv) - but NOT conda!
 - Access to an LLM API (can be open source via Ollama, or cloud providers like OpenAI, Anthropic, Gemini).
-- No Machine Learning experience needed!
 
 ### ⚙️ Setup Instructions 
 
