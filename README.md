@@ -40,14 +40,14 @@ This repository takes you through 5 real-world AI agent projects, from simple he
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/evastevanovic/langchain.git](https://github.com/evastevanovic/langchain.git)
+   git clone https://github.com/evastevanovic/langchain.git
    cd langchain
 
 ### ⚙️ Setup Instructions 
 
 1. **Clone the repository**
    ```bash
-   git clone git clone [https://github.com/evastevanovic/langchain.git](https://github.com/evastevanovic/langchain.git)
+   git clone git clone https://github.com/evastevanovic/langchain.git
    cd langchain-course
    ```
 2. **For branch-based projects:**
