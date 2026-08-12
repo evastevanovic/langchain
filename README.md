@@ -42,14 +42,8 @@ This repository takes you through 5 real-world AI agent projects, from simple he
    ```bash
    git clone https://github.com/evastevanovic/langchain.git
    cd langchain
-
-### ⚙️ Setup Instructions 
-
-1. **Clone the repository**
-   ```bash
-   git clone git clone https://github.com/evastevanovic/langchain.git
-   cd langchain-course
    ```
+   
 2. **For branch-based projects:**
    ```bash
    # Start with Hello World
