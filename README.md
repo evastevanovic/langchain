@@ -52,11 +52,10 @@ This repository takes you through 5 real-world AI agent projects, from simple he
    uv run python main.py
    ```
    
-   Configure Environment Variables - Create a .env file in the project root:
+   **Configure Environment Variables** - Create a .env file in the project root:
 
    ```
-    OPENAI_API_KEY=your_openai_api_key
-    TAVILY_API_KEY=your_tavily_api_key
+   TAVILY_API_KEY=your_tavily_api_key
    
     # Optional: LangSmith Tracing
     LANGSMITH_TRACING=true
