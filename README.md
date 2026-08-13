@@ -45,10 +45,23 @@ This repository takes you through 5 real-world AI agent projects, from simple he
    ```
    
 2. **For branch-based projects:**
+   Setup environment:
    ```bash
    # Start with Hello World
    git checkout project/hello-world
    uv sync
+   ```
+
+   Pull the following models; different branches require different models:
+   ```
+   ollama pull qwen3-embedding:0.6b
+   ollama pull llama3.2:3b
+   ollama pull qwen3:1.7b
+   ollama pull gemma3:270m
+   ```
+
+   Run:
+   ```
    uv run python main.py
    ```
    
